@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-LABEL MAINTAINER "Elvis Tombini <elvis@mapom.me>"
+LABEL MAINTAINER "Elvis Tombini <github+docker-typescript@mapom.me>"
 
 RUN apt-get update \
     && apt-get -yyq install npm \
