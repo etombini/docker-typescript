@@ -1,15 +1,12 @@
-FROM ubuntu:16.04
+FROM alpine:latest
 
 LABEL MAINTAINER "Elvis Tombini <github+docker-typescript@mapom.me>"
 
-RUN apt-get update \
-    && apt-get -yyq install npm \
-    && ln -s /usr/bin/nodejs /usr/bin/node \
+RUN apk --no-cache add nodejs nodejs-npm \
     && npm install -g typescript
 
 ENV HOME /home/user
-RUN useradd --create-home --home-dir $HOME user \
-    && chown -R user:user $HOME
+RUN adduser -h $HOME -D user
 
 RUN mkdir /app \
     && chown -R user:user /app
