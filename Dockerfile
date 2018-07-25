@@ -16,3 +16,5 @@ RUN apk --no-cache add nodejs nodejs-npm \
 USER user:user
 
 WORKDIR /app
+
+ENTRYPOINT	[ "tsc" ]
