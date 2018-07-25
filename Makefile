@@ -8,7 +8,7 @@ show-version:
 	@echo $(VERSION)
 
 show-usage: 
-	@echo "docker run -i -t --rm=true -v \$$(pwd):/app typescript tsc --help"
+	@echo "docker run -t --rm=true -v \$$(pwd):/app typescript tsc --help"
 
 build: Dockerfile
 	docker build -t $(REGISTRY)/$(IMAGE):$(VERSION) .
