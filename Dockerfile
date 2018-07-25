@@ -1,4 +1,4 @@
-FROM alpine:3.6
+FROM alpine:latest
 
 LABEL MAINTAINER "Elvis Tombini <github+docker-typescript@mapom.me>"
 
